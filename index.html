@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header" id="home">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-s"></i>
+                    <div class="logo-text">Saiteja Konam</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="https://drive.google.com/file/d/1-0c5VH-hXHtDBPrSCNH7Jsoyqqf0LsIB/view?usp=sharing">Resume</a></li>
+                        <li><a href="#learnings">Learnings</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container1">
+                 <div class="hero-pic">
+                    <img src="./profile.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">AIML Undergraduate    </span></h5>
+                    <h1>Saiteja Konam</h1>
+                    <p> AI and ML undergraduate student proficient in Python, C, MySQL with expertise in Data Structures & Algorithms, DBMS, and
+                        Machine Learning. Strong communicator and leader, adept at both independent and collaborative work. Seeking mentorship to
+                        further develop analytical skills and contribute effectively to a dynamic team.                        
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="https://drive.google.com/file/d/1-0c5VH-hXHtDBPrSCNH7Jsoyqqf0LsIB/view?usp=sharing" class="btn active">Download CV</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://github.com/saitejakonam"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/saiteja-konam-145029254/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=saitejakonam123@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     
+     <section id="projects" class="projects">
+        <div  class="wrapper">
+            <h2 class="section-title">Projects</h2>
+            <div class="projectsitems">
+                <div class="project">
+                    <h3>Virtual Assistant using Python</h3>
+                    <p>Developed a voice assistant capable of searching requests in Google, playing the requested YouTube videos, and basic functionalities.</p>
+                    <p><b>Tech Stack used:</b> Python, pyttsx3, speech recognition, and web browser</p>
+                </div>
+                <div class="project">
+                    <h3>Analysis of Superstore Dataset with DA</h3>
+                    <p>Implemented analysis techniques to identify distinct customer segments based on geographic location, identified sales trends over time, calculated profit margins, and analyzed customer purchasing patterns.</p>
+                    <p><b>Tech Stack used:</b> Python, NumPy, Pandas, Seaborn, and Matplotlib</p>
+                </div>
+                <div class="project">
+                    <h3>Music Recommendation System</h3>
+                    <p>Developed a music recommendation system using a sample dataset to identify correlations between users and songs, enabling personalized song suggestions based on individual listening histories.</p>
+                    <p><b>Tech Stack used:</b> Python, TensorFlow and Keras</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="learnings" class="learnings">
+        <div class="wrapper">
+            <h2 class="section-title">Learnings</h2>
+            <div class="projectsitems">
+                <div class="project">
+                    <h3>PHN Technology</h3>
+                    <p>Gained leveraging practical experience at PHN technology for efficient Data Processing, Analysis, and Machine Learning Model Deployment, Enhancing overall technical skills and Project management capabilities.</p>
+                </div>
+                <div class="project">
+                    <h3>Supervised Machine Learning: Regression and Classification, Issued by Coursera</h3>
+                    <p>Completed the 'Supervised Machine Learning: Regression and Classification' course on Coursera. Gained proficiency in implementing regression and classification models to solve real-world problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="wrapper">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contactinfo">
+                <ul>
+                    <li>Email: <a href="mailto:saitejakonam123@gmail.com">saitejakonam123@gmail.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/saiteja-konam-145029254/" target="_blank">Saiteja Konam</a></li>
+                    <li>GitHub: <a href="https://github.com/saitejakonam" target="_blank">saitejakonam</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["AI&ML Undergraduate","Frontend Developer","Data Analyst"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
